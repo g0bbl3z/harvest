@@ -28,31 +28,31 @@
     ],
     "users": [
         {
-            "userID": 1,
+            "id": 1,
             "name": "Zeke",
             "username": "zvandehy",
             "imageURL": "https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
         },
         {
-            "userID": 2,
+            "id": 2,
             "name": "Mary Margaret",
             "username": "MMG",
             "imageURL": "https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
         },
         {
-            "userID": 3,
+            "id": 3,
             "name": "Bill",
             "username": "bill_ray",
             "imageURL": "https://images.unsplash.com/photo-1466112928291-0903b80a9466?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
         },
         {
-            "userID": 4,
+            "id": 4,
             "name": "Cade",
             "username": "cade.mack",
             "imageURL": "https://images.unsplash.com/photo-1474447976065-67d23accb1e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
         },
         {
-            "userID": 5,
+            "id": 5,
             "name": "Aaron",
             "username": "Shamsyboy",
             "imageURL": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
