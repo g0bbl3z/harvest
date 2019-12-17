@@ -1,0 +1,145 @@
+{
+    "harvests": [
+        {
+            "harvestID": 1,
+            "userID": "1",
+            "name": "Zeke and MMG"
+        },
+        {
+            "harvestID": 2,
+            "userID": "1",
+            "name": "Rap and MMG"
+        },
+        {
+            "harvestID": 3,
+            "userID": "1",
+            "name": "Keeping up with Aaron and Cade"
+        },
+        {
+            "harvestID": 4,
+            "userID": "4",
+            "name": "Aaron and Zeke"
+        },
+        {
+            "harvestID": 5,
+            "userID": "1",
+            "name": "Anti pop and MMG"
+        }
+    ],
+    "users": [
+        {
+            "userID": 1,
+            "name": "Zeke",
+            "username": "zvandehy",
+            "imageURL": "https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+            "userID": 2,
+            "name": "Mary Margaret",
+            "username": "MMG",
+            "imageURL": "https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        },
+        {
+            "userID": 3,
+            "name": "Bill",
+            "username": "bill_ray",
+            "imageURL": "https://images.unsplash.com/photo-1466112928291-0903b80a9466?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        },
+        {
+            "userID": 4,
+            "name": "Cade",
+            "username": "cade.mack",
+            "imageURL": "https://images.unsplash.com/photo-1474447976065-67d23accb1e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        },
+        {
+            "userID": 5,
+            "name": "Aaron",
+            "username": "Shamsyboy",
+            "imageURL": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        }
+    ],
+    "userfollowers": [
+        {
+            "userID": 1,
+            "followsID": 2
+        },
+        {
+            "userID": 1,
+            "followsID": 3
+        },
+        {
+            "userID": 1,
+            "followsID": 4
+        },
+        {
+            "userID": 1,
+            "followsID": 5
+        },
+        {
+            "userID": 2,
+            "followsID": 1
+        },
+        {
+            "userID": 2,
+            "followsID": 3
+        },
+        {
+            "userID": 2,
+            "followsID": 4
+        },
+        {
+            "userID": 3,
+            "followsID": 1
+        },
+        {
+            "userID": 4,
+            "followsID": 1
+        },
+        {
+            "userID": 4,
+            "followsID": 5
+        }
+    ],
+    "harvestseeds": [
+        {
+            "harvestID": 1,
+            "endpoint": "1"
+        },
+        {
+            "harvestID": 1,
+            "endpoint": "2"
+        },
+        {
+            "harvestID": 2,
+            "endpoint": "/v1/playlists/5fEH22a5jpfbxEVsD8HhFz"
+        },
+        {
+            "harvestID": 2,
+            "endpoint": "2"
+        },
+        {
+            "harvestID": 3,
+            "endpoint": "4"
+        },
+        {
+            "harvestID": 3,
+            "endpoint": "5"
+        },
+        {
+            "harvestID": 4,
+            "endpoint": "1"
+        },
+        {
+            "harvestID": 4,
+            "endpoint": "5"
+        },
+        {
+            "harvestID": 5,
+            "endpoint": "/v1/playlists/37i9dQZF1DWWqNV5cS50j6"
+        },
+        {
+            "harvestID": 5,
+            "endpoint": "2"
+        }
+    ]
+}
