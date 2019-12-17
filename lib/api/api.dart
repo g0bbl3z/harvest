@@ -1,15 +1,14 @@
 
+import 'package:harvest/models/harvest.dart';
 import 'package:harvest/models/loginResponse.dart';
-
-import 'models/harvest.dart';
-import 'models/seed.dart';
-import 'models/song.dart';
-import 'models/user.dart';
+import 'package:harvest/models/seed.dart';
+import 'package:harvest/models/song.dart';
+import 'package:harvest/models/user.dart';
 
 abstract class Api {
   //this might look slightly different because of how we will handle Spotify Logins
   //validate login
-  Future<LoginResponse> login ();
+  Future<LoginResponse> login (int userID);
 
   //get the user
   Future<User> getUser(int userID);

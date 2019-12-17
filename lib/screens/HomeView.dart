@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:harvest/models/user.dart';
 
-class HomePage extends StatefulWidget {
+class HomeView extends StatefulWidget {
   final User user;
-  HomePage({Key key, this.user}) : super(key: key);
+  HomeView({Key key, this.user}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomeViewState createState() => _HomeViewState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeViewState extends State<HomeView> {
   
 
   @override

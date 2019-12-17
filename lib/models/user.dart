@@ -7,7 +7,7 @@ class User {
   User({this.name, this.username, this.imageURL});
 
   User.fromMap(Map<dynamic, dynamic> json) {
-    this.userID = json["userID"];
+    this.userID = json["id"];
     this.name = json["name"];
     this.username = json["username"];
     this.imageURL = json["imageURL"];
