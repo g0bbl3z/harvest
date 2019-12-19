@@ -1,7 +1,4 @@
 import 'package:http/http.dart' as http;
-import 'dart:convert';
-
-import 'package:harvest/models/loginResponse.dart';
 import 'package:harvest/models/harvest.dart';
 import 'package:harvest/models/seed.dart';
 import 'package:harvest/models/song.dart';
@@ -15,12 +12,6 @@ class HttpApi implements Api {
 
   @override
   Future<User> getUser(int userID) async {
-    // TODO: implement login
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<LoginResponse> login(int userID) {
     // TODO: implement login
     throw UnimplementedError();
   }

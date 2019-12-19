@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:harvest/controllers/UserController.dart';
 import 'package:harvest/models/user.dart';
+import 'package:provider/provider.dart';
 
 class HomeView extends StatefulWidget {
-  final User user;
-  HomeView({Key key, this.user}) : super(key: key);
+
+  HomeView({Key key}) : super(key: key);
 
   @override
   _HomeViewState createState() => _HomeViewState();
@@ -14,10 +16,20 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
+    final userController = Provider.of<UserController>(context);
     return Scaffold(
       body: Center(
-        child: Container(
-          child: Text("This is the User's Name: ${widget.user.name}"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child: Text("This is the User's Name: ${userController.user.name}"),
+            ),
+            Container(
+              child: Text("This is the User's Username: ${userController.user.username}"),
+            ),
+            Image.network("${userController.user.imageURL}"),
+          ],
         ),
       ),
     );

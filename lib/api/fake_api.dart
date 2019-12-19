@@ -3,7 +3,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-import 'package:harvest/models/loginResponse.dart';
 import 'package:harvest/models/harvest.dart';
 import 'package:harvest/models/seed.dart';
 import 'package:harvest/models/song.dart';
@@ -19,16 +18,6 @@ class FakeApi implements Api {
   Future<User> getUser(int userID) async {
     var response = await client.get('$source/users/$userID');
     return User.fromMap(json.decode(response.body));
-  }
-
-
-  //this method will probably look very different with Spotify Login
-  @override
-  Future<LoginResponse> login(int userID) async{
-    userID = 1; //Always use user: Zeke
-    var fetchedUser = await getUser(userID);
-    var hasUser = fetchedUser != null;
-    return LoginResponse(userID: userID, success: hasUser, message: "");
   }
 
   @override
