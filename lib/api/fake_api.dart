@@ -27,21 +27,36 @@ class FakeApi implements Api {
   }
 
   @override
-  Future<List<User>> getFollowingFromUser(int userID) {
-    // TODO: implement getFollowingFromUser
-    throw UnimplementedError();
+  Future<List<User>> getFollowingFromUser(int userID) async{
+    List<User> ret = List();
+    var following = await client.get('$source/userfollowers?userID=$userID');
+    var followingJsn = json.decode(following.body);
+    for(var following_entry in followingJsn) {
+      ret.add(await getUser(following_entry["followsID"]));
+    }
+    return ret;
   }
 
   @override
-  Future<List<Harvest>> getHarvestsFromUser(int userID) {
-    // TODO: implement getHarvestsFromUser
-    throw UnimplementedError();
+  Future<List<Harvest>> getHarvestsFromUser(int userID) async {
+    List<Harvest> ret = List();
+    var response = await client.get('$source/harvests?userID=$userID');
+    var jsn = json.decode(response.body);
+    for(var item in jsn) {
+      ret.add(Harvest.fromMap(item));
+    }
+    return ret;
   }
 
   @override
-  Future<List<Seed>> getSeedsFromHarvest(int harvestID) {
-    // TODO: implement getSeedsFromHarvest
-    throw UnimplementedError();
+  Future<List<Seed>> getSeedsFromHarvest(int harvestID) async {
+    List<Seed> ret = List();
+    var response = await client.get('$source/harvestseeds?harvestID=$harvestID');
+    var jsn = json.decode(response.body);
+    for(var item in jsn) {
+      ret.add(Seed.fromMap(item));
+    }
+    return ret;
   }
 
   @override

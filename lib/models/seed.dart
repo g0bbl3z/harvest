@@ -13,7 +13,7 @@ class Seed {
     } catch (e) {
       try { 
         String endpoint = json["endpoint"];
-        this.name = "GetPlaylistNameFromEndpoint: " + endpoint;
+        this.name = "SpotifyPlaylistEndpoint: " + endpoint;
         this.type = SeedType.Playlist;
       } catch (error) {
         this.name = "Error";

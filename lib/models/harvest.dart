@@ -4,6 +4,8 @@
 class Harvest {
   int harvestID;
   String name;
+  int numTrends = 0;
+  int numPlaylists = 0;
 
   Harvest({this.harvestID, this.name});
 
@@ -11,4 +13,13 @@ class Harvest {
     this.name = json["name"];
     this.harvestID = json["harvestID"];
   }
+
+  setNumTrends(int numTrends) {
+    this.numTrends = numTrends;
+  }
+
+  setNumPlaylists(int numPlaylists) {
+    this.numPlaylists = numPlaylists;
+  }
+
 }

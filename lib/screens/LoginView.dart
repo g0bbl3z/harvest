@@ -21,6 +21,7 @@ class LoginView extends StatelessWidget {
                         child: Text("Login"),
                         onPressed: () async {
                           var loginSuccess = await userController.login();
+                          await userController.getUserHarvests();
                           if (loginSuccess)
                             Navigator.pushNamed(context, RoutePaths.Home);
                         },
