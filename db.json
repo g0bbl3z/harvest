@@ -1,27 +1,27 @@
 {
     "harvests": [
         {
-            "harvestID": 1,
+            "id": 1,
             "userID": "1",
             "name": "Zeke and MMG"
         },
         {
-            "harvestID": 2,
+            "id": 2,
             "userID": "1",
             "name": "Rap and MMG"
         },
         {
-            "harvestID": 3,
+            "id": 3,
             "userID": "1",
             "name": "Keeping up with Aaron and Cade"
         },
         {
-            "harvestID": 4,
+            "id": 4,
             "userID": "4",
             "name": "Aaron and Zeke"
         },
         {
-            "harvestID": 5,
+            "id": 5,
             "userID": "1",
             "name": "Anti pop and MMG"
         }
