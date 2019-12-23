@@ -46,4 +46,10 @@ class HttpApi implements Api {
     throw UnimplementedError();
   }
 
+  @override
+  Future<bool> postUserHarvests(int userID, String harvestName, List<int> trends, List<String> playlists) {
+    // TODO: implement postUserHarvests
+    throw UnimplementedError();
+  }
+
 }

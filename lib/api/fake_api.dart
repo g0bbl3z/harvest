@@ -1,5 +1,7 @@
 
 
+import 'dart:io';
+
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -35,6 +37,29 @@ class FakeApi implements Api {
       ret.add(await getUser(following_entry["followsID"]));
     }
     return ret;
+  }
+
+  Future<bool> postUserHarvests(int userID, String harvestName, List<int> trends, List<String> playlists) async {
+    await Future.delayed(Duration(seconds: 1));
+    var headers ={
+        HttpHeaders.contentTypeHeader: 'application/json'
+      };
+    String jsn = '{"name": "$harvestName", "userID": $userID}'; // make POST request
+    var response = await client.post('$source/harvests', headers: headers, body: jsn); // check the status code for the result
+    int harvestStatus = response.statusCode;
+    print(harvestStatus);
+    String body = response.body;
+    int harvestID = json.decode(response.body)["id"];
+    print(body);
+    for(int id in trends) {
+      jsn = '{"harvestID": "$harvestID", "endpoint": $id}'; // make POST request
+      response = await client.post('$source/harvestseeds', headers: headers, body: jsn); // check the status code for the result
+      int harvestSeedStatus = response.statusCode; // API passes back the id of the new item added to the body
+      print(harvestSeedStatus.toString());
+      body = response.body;
+      print(body);
+    }
+    return true;
   }
 
   @override

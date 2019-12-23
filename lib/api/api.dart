@@ -17,6 +17,9 @@ abstract class Api {
   //get playlists that this user has sync'd
   Future<List<Harvest>> getHarvestsFromUser(int userID);
 
+  //create a harvest for a user
+  Future<bool> postUserHarvests(int userID, String harvestName, List<int> trends, List<String> playlists);
+
   //get the seeds that make up a harvest
   Future<List<Seed>> getSeedsFromHarvest(int harvestID);
 

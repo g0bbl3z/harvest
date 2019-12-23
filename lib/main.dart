@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:harvest/controllers/UserController.dart';
 import 'package:harvest/locator.dart';
+import 'package:harvest/myColors.dart';
 
 import 'package:harvest/router.dart';
 import 'package:harvest/screens/HomeView.dart';
@@ -27,7 +28,10 @@ class HarvestApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Harvest',
         theme: ThemeData(
-          primarySwatch: Colors.green,
+          primarySwatch: MaterialColor(green.value, myColor),
+          buttonColor: red,
+          backgroundColor: white,
+          scaffoldBackgroundColor: white,
         ),
         onGenerateRoute: Router.generateRoute,
         initialRoute: RoutePaths.Login,

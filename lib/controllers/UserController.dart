@@ -74,6 +74,14 @@ class UserController extends ChangeNotifier {
     }
   }
 
+  Future<bool> createUserHarvest(String harvestName, List<User> trends, List<String> playlists) async {
+    setState(ViewState.Busy);
+    List<int> trendIDs = trends.map((trend) => trend.userID).toList();
+    bool response = await _api.postUserHarvests(_user.userID, harvestName, trendIDs, playlists);
+    setState(ViewState.Idle);
+    return response;
+  }
+
 
 
 }

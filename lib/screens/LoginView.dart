@@ -9,13 +9,15 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<UserController>(
-        builder: (context, userController, child) => Scaffold(
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text("Login page"),
-                userController.state == ViewState.Busy
+      builder: (context, userController, child) => Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text("Login page"),
+              AnimatedSwitcher(
+                duration: Duration(milliseconds: 200),
+                child: userController.state == ViewState.Busy
                     ? CircularProgressIndicator()
                     : RaisedButton(
                         child: Text("Login"),
@@ -26,10 +28,11 @@ class LoginView extends StatelessWidget {
                             Navigator.pushNamed(context, RoutePaths.Home);
                         },
                       ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
+      ),
     );
   }
 }
